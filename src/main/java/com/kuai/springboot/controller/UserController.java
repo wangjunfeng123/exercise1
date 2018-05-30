@@ -33,11 +33,11 @@ public class UserController {
     public String user() {
         UserEntity user = new UserEntity();
         user.setNickName("zhangsan");
-        user.setPassword("11111");
+        user.setPassword("2222222222");
         user.setUserName("zhangsanss");
-        user.setUserSex(UserSexEnum.MAN);
+        user.setUserSex(UserSexEnum.WOMAN);
+        userService.save(user);
 
-        userMapper.insert(user);
         return "insert";
     }
 
