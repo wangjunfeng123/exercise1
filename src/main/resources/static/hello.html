@@ -1,0 +1,5 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<p th:text="${message}">Hello World!</p>
+<a th:href="@{http://www.thymeleaf.org}">Thymeleaf</a>
+<a th:href="@{/login}" th:unless=${session.user != null}>Login</a>
+</html>
