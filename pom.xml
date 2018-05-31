@@ -37,10 +37,10 @@
 		</dependency>
 
         <!--web 项目-->
+        <!--   注意：加上<scope>test</scope>报错  -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-            <scope>test</scope>
         </dependency>
 
         <!--开发环境调试-->
