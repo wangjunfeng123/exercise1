@@ -12,9 +12,9 @@ public class BeanFactory {
 
     public static Object getBean(String className) throws ClassNotFoundException, IllegalAccessException, InstantiationException {
         Object obj = Class.forName(className).newInstance();
-        AOPHandler handler = new AOPHandler(obj);
+        AOPHandler aopHandler = new AOPHandler(obj);
         return Proxy.newProxyInstance(obj.getClass().getClassLoader(),
-                obj.getClass().getInterfaces(), handler);
+                obj.getClass().getInterfaces(), aopHandler);
     }
 
     public static<T> T getBean(String className,Class<T> clazz)

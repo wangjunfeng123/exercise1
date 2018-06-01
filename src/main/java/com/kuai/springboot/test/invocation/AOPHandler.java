@@ -41,6 +41,7 @@ public class AOPHandler implements InvocationHandler {
             System.out.println("\t\t\t"+arg);
         }
         Object result = method.invoke(target, args);
+        System.out.println(method.getDeclaringClass());
         println("返回值为：",result);
         println("返回值数据类型",method.getReturnType());
         return result;

@@ -6,7 +6,7 @@ package com.kuai.springboot.test.invocation;
  * @desc The type Sale menu service.
  * @since ${date}
  */
-public class HelloImpl implements WorldInterface ,HelloInterface{
+public class WorldImpl implements HelloInterface,WorldInterface{
     @Override
     public void hello() {
         System.out.println("hello");
@@ -20,12 +20,12 @@ public class HelloImpl implements WorldInterface ,HelloInterface{
 
     @Override
     public void bye(String message) {
-        System.out.println("bye message");
+        System.out.println("byeee message"+ message);
     }
 
     @Override
     public String sleep(String message) {
         System.out.println("sleep message");
-        return "sleep"+ message;
+        return "sleep==========="+ message;
     }
 }
