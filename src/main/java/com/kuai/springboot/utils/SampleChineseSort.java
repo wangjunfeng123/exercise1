@@ -1,4 +1,4 @@
-package com.kuai.springboot.util;
+package com.kuai.springboot.utils;
 
 import java.text.Collator;
 import java.util.*;

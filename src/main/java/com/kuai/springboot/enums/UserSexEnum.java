@@ -1,4 +1,4 @@
-package com.kuai.springboot.domain.enums;
+package com.kuai.springboot.enums;
 
 /**
  * @author wangjunfeng
