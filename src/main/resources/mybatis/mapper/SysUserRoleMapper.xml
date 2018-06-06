@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.kuai.springboot.mapper.SysUserRoleMapper" >
+  <resultMap id="BaseResultMap" type="com.kuai.springboot.domain.SysUserRole" >
+    <id column="role_id" property="roleId" jdbcType="INTEGER" />
+    <id column="uid" property="uid" jdbcType="INTEGER" />
+  </resultMap>
+
+  <delete id="deleteByPrimaryKey" parameterType="com.kuai.springboot.domain.SysUserRole" >
+    delete from sys_user_role
+    where role_id = #{roleId,jdbcType=INTEGER}
+      and uid = #{uid,jdbcType=INTEGER}
+  </delete>
+
+  <insert id="insert" parameterType="com.kuai.springboot.domain.SysUserRole" >
+    insert into sys_user_role (role_id, uid)
+    values (#{roleId,jdbcType=INTEGER}, #{uid,jdbcType=INTEGER})
+  </insert>
+
+  <insert id="insertSelective" parameterType="com.kuai.springboot.domain.SysUserRole" >
+    insert into sys_user_role
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="roleId != null" >
+        role_id,
+      </if>
+      <if test="uid != null" >
+        uid,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="roleId != null" >
+        #{roleId,jdbcType=INTEGER},
+      </if>
+      <if test="uid != null" >
+        #{uid,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+
+</mapper>

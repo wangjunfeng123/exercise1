@@ -9,7 +9,7 @@ import java.io.IOException;
 /**
  * @author wangjunfeng
  * @version 1.0
- * @desc The type Sale menu service.
+ * @desc 自定义过滤器
  * @since ${date}
  */
 @Configuration

@@ -2,12 +2,25 @@ package com.kuai.springboot.domain;
 
 import java.util.List;
 
+/**
+ * 角色
+ * 角色和权限是多对多的关系
+ */
 public class SysRole {
     private Integer id;
     private Boolean available;
     private String description;
     private String role;
     private List<SysPermission> permissions;
+    private List<UserInfo> userInfos;
+
+    public List<UserInfo> getUserInfos() {
+        return userInfos;
+    }
+
+    public void setUserInfos(List<UserInfo> userInfos) {
+        this.userInfos = userInfos;
+    }
 
     public List<SysPermission> getPermissions() {
         return permissions;

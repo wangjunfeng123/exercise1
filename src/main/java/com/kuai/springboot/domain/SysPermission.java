@@ -1,21 +1,28 @@
 package com.kuai.springboot.domain;
 
+import java.util.List;
+
+/**
+ * 权限
+ */
 public class SysPermission {
     private Integer id;
-
     private Boolean available;
-
     private String name;
-
     private Long parentId;
-
     private String parentIds;
-
     private String permission;
-
     private String resourceType;
-
     private String url;
+    private List<SysRole> roles;
+
+    public List<SysRole> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(List<SysRole> roles) {
+        this.roles = roles;
+    }
 
     public Integer getId() {
         return id;

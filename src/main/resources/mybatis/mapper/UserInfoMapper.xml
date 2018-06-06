@@ -103,4 +103,8 @@
       username = #{username,jdbcType=VARCHAR}
     where uid = #{uid,jdbcType=INTEGER}
   </update>
+
+  <select id="findByUsername" resultMap="BaseResultMap">
+
+  </select>
 </mapper>

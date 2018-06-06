@@ -2,6 +2,10 @@ package com.kuai.springboot.domain;
 
 import java.util.List;
 
+/**
+ * 用户信息
+ * 用户和角色是一对多的关系
+ */
 public class UserInfo {
     private Integer uid;
     private String name;

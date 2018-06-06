@@ -12,9 +12,9 @@ public class UserInfoServiceImpl implements UserInfoService {
 
     @Resource
     private UserInfoMapper userInfoMapper;
+
     @Override
     public UserInfo findByUsername(String username) {
-        System.out.println("UserInfoServiceImpl.findByUsername()");
         return userInfoMapper.findByUsername(username);
     }
 }
