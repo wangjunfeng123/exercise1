@@ -33,6 +33,11 @@ public class ThreadCreate {
 //                System.out.println("======="+this.getName());
 //            }
         }.start();
+
+        //第三个线程
+        new Create().start();
+
+
         System.out.println("ttttttttt");
     }
 

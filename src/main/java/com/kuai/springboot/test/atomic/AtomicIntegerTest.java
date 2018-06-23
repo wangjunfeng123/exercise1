@@ -34,12 +34,12 @@ public class AtomicIntegerTest {
             };
             threads[i].start();
         }
-        Thread.sleep(100);
+        Thread.sleep(1000);
         startDownLatch.countDown();
         for (Thread t:threads) {
             t.join();
         }
         System.out.println("Atomic最终运行结果："+TEST_INTEGER.get());
-        System.out.println("valatile 最终结果"  + index);
+        System.out.println("index 最终结果"  + index);
     }
 }

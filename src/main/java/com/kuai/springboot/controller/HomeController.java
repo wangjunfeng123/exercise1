@@ -1,6 +1,8 @@
 
 package com.kuai.springboot.controller;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.UnknownAccountException;
 import org.springframework.stereotype.Controller;
@@ -10,12 +12,14 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
 
 @Controller
+@Api(description = "home 模块")
 public class HomeController {
     @RequestMapping({"/","/index"})
     public String index(){
         return"/index";
     }
 
+    @ApiOperation(value = "登录验证")
     @RequestMapping("/login")
     public String login(HttpServletRequest request, Map<String, Object> map) throws Exception{
         System.out.println("HomeController.login()");

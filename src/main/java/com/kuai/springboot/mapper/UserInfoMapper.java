@@ -1,6 +1,8 @@
 package com.kuai.springboot.mapper;
 
 import com.kuai.springboot.domain.UserInfo;
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 @Repository
